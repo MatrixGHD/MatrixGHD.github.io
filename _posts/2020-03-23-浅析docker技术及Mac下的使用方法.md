@@ -185,22 +185,22 @@ sudo apachectl stop //关闭apache
 
 ![]({{site.baseurl}}/img/dockersearch.png)
 
-`docker run --name mynginx -d -p 8080:80 nginx` 从官方镜像注册表拉取最新版nginx
+`docker run --name nginx -d -p 8080:80 nginx` 从官方镜像注册表拉取最新版nginx
 
-| 参数             | 作用                                               |
-| ---------------- | -------------------------------------------------- |
-| -i               | 以交互模式运行容器，通常与 -t 同时使用；           |
-| -t               | 为容器重新分配一个伪输入终端，通常与 -i 同时使用； |
-| -d               | 后台运行容器，并返回容器ID；                       |
-| `--name mynginx` | 该参数指定容器实例的名字                           |
-| -p 80:80         | 指定要映射的IP和端口,hostPort:containerPort        |
-| -P               | 随机映射主机端口                                   |
+| 参数         | 作用                                               |
+| ------------ | -------------------------------------------------- |
+| -i           | 以交互模式运行容器，通常与 -t 同时使用；           |
+| -t           | 为容器重新分配一个伪输入终端，通常与 -i 同时使用； |
+| -d           | 后台运行容器，并返回容器ID；                       |
+| --name nginx | 该参数指定容器实例的名字                           |
+| -p 80:80     | 指定要映射的IP和端口,hostPort:containerPort        |
+| -P           | 随机映射主机端口                                   |
 
 `docker rm -f mynginx` 可以直接删除容器
 
-Docker ps 查看运行中的容器
+` Docker ps`  查看运行中的容器
 
-docker exec -it mynginx /bin/bash 在运行的容器中执行命令/bin/bash,打开一个交互模式终端
+`docker exec -it mynginx /bin/bash` 在运行的容器中执行命令/bin/bash,打开一个交互模式终端
 
 ![]({{site.baseurl}}/img/dockerexec.png)Nginx安装在usr/lib/nginx下，配置在etc/nginx下面，包括nginx.conf主配置文件，conf.d和site-enabled是附加的配置文件。后面，我们将会该目录映射到宿主机目录，以便于修改和管理。
 
@@ -210,29 +210,29 @@ docker exec -it mynginx /bin/bash 在运行的容器中执行命令/bin/bash,打
 
 设置文件夹映射
 
-docker run --name mynginx -d -p 8080:80  -v /Users/matrix/nginx/app:/usr/share/nginx/html  nginx
+` docker run --name mynginx -d -p 8080:80  -v /Users/matrix/nginx/app:/usr/share/nginx/html  nginx` 
 
 在/Users/matrix/nginx/app下创建一个index.html文件
 
 访问http://localhost:8080
 
-![image-20200323121236707](/Users/matrix/Library/Application Support/typora-user-images/image-20200323121236707.png)
+![]({{site.baseurl}}/img/itworks.png)
 
-docker logs mynginx 可以查看刚刚的web日志
+` docker logs mynginx ` 可以查看刚刚的web日志
 
 ![]({{site.baseurl}}/img/dockerlogs.png)
 
-docker container list -a 可以查看容器的md5值
+` docker container list -a ` 可以查看容器的md5值
 
 ![]({{site.baseurl}}/img/containerlist.png)
 
-进入容器也可使用md5值：docker exec -it 527 bash
+进入容器也可使用md5值：` docker exec -it 527 bash` 
 
 #### 建立配置文件映射
 
 使用将容器中的默认配置文件映射到宿主机中即可
 
-docker run --name nginx -d -p 8080:80  -v /Users/matrix/nginx/app:/usr/share/nginx/html -v /Users/matrix/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf   nginx
+` docker run --name nginx -d -p 8080:80  -v /Users/matrix/nginx/app:/usr/share/nginx/html -v /Users/matrix/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf nginx` 
 
 ## Docker容器安全管控
 
