@@ -185,7 +185,7 @@ sudo apachectl stop //关闭apache
 
 ![]({{site.baseurl}}/img/dockersearch.png)
 
-`docker run --name nginx -d -p 8080:80 nginx` 从官方镜像注册表拉取最新版nginx
+`docker run --name nginx -d -p 80:80 nginx` 从官方镜像注册表拉取最新版nginx
 
 | 参数         | 作用                                               |
 | ------------ | -------------------------------------------------- |
@@ -210,11 +210,11 @@ sudo apachectl stop //关闭apache
 
 设置文件夹映射
 
-` docker run --name mynginx -d -p 8080:80  -v /Users/matrix/nginx/app:/usr/share/nginx/html  nginx` 
+` docker run --name mynginx -d -p 80:80  -v /Users/matrix/nginx/app:/usr/share/nginx/html  nginx` 
 
 在/Users/matrix/nginx/app下创建一个index.html文件
 
-访问http://localhost:8080
+访问http://localhost:80
 
 ![]({{site.baseurl}}/img/itworks.png)
 
@@ -232,7 +232,7 @@ sudo apachectl stop //关闭apache
 
 使用将容器中的默认配置文件映射到宿主机中即可
 
-` docker run --name nginx -d -p 8080:80  -v /Users/matrix/nginx/app:/usr/share/nginx/html -v /Users/matrix/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf nginx` 
+` docker run --name nginx -d -p 80:80  -v /Users/matrix/nginx/app:/usr/share/nginx/html -v /Users/matrix/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf nginx` 
 
 ## Docker容器安全管控
 
