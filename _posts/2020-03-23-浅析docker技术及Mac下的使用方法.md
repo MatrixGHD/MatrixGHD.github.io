@@ -165,6 +165,21 @@ Docker Registry公开服务是开放给用户使用、允许用户管理镜像�
 
 除了使用公开服务外，用户还可以在本地搭建私有Docker Registry 。Docker官方提供了Docker Registry镜像，可以直接使用做为私有Registry服务。开源的Docker Registry镜像只提供了Docker Registry API的服务端实现，足以支持Docker命令，不影响使用。但不包含图形界面，以及镜像维护、用户管理、访问控制等高级功能。
 
+## 使用docker搭建dvwa
+
+```
+Docker search dvwa //查找镜像
+Docker pull citizenstig/dvwa   //拉取镜像到本地
+Docker run -d -p 80:80 citizenstig/dvwa //random mysql password在后台运行镜像，指定从容器80端口映射到本地80端口
+sudo docker run -d -p 80:80 -p 3306:3306 -e MYSQL_PASS="Chang3ME!" citizenstig/dvwa  //specify it as environment variable
+Docker stop container_id  //暂停容器
+Docker start container_id  //运行容器
+Docker rm container_id  //删除容器
+Docker rmi image_id  //删除镜像
+```
+
+
+
 ## 使用Docker搭建nginx服务器
 
 此处略过Docker安装。
