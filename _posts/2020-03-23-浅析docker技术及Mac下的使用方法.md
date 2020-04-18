@@ -170,8 +170,10 @@ Docker Registry公开服务是开放给用户使用、允许用户管理镜像�
 ```
 Docker search dvwa //查找镜像
 Docker pull citizenstig/dvwa   //拉取镜像到本地
-Docker run -d -p 80:80 citizenstig/dvwa //random mysql password在后台运行镜像，指定从容器80端口映射到本地80端口
-sudo docker run -d -p 80:80 -p 3306:3306 -e MYSQL_PASS="Chang3ME!" citizenstig/dvwa  //specify it as environment variable
+Docker run -d -p 80:80 citizenstig/dvwa 
+//random mysql password在后台运行镜像，指定从容器80端口映射到本地80端口
+sudo docker run -d -p 80:80 -p 3306:3306 -e MYSQL_PASS="Chang3ME!" citizenstig/dvwa
+//specify it as environment variable
 Docker stop container_id  //暂停容器
 Docker start container_id  //运行容器
 Docker rm container_id  //删除容器
