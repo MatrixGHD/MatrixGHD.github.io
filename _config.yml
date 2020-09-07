@@ -1,10 +1,9 @@
 # Site settings
 title: Matrix Blog
-SEOTitle: 惠锋的博客 ｜ Matrix's Blog
+SEOTitle: Matrix's Blog
 header-img: img/about.jpg
-email: hellohfyin@gmail.com
 description: "Make Better Choice."
-keyword: "Matrix, Matrix's Blog, 惠锋的博客, yinhuifeng, 尹惠锋, hack, security, web"
+keyword: "Matrix, Matrix's Blog, hack, security, web"
 url: "http://MatrixGHD.github.io"          # your host, for absolute URL
 baseurl: "https://matrixghd.github.io"      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/MatrixGHD/MatrixGHD.github.io.git" # you code repository
