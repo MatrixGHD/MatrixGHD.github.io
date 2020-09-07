@@ -12,7 +12,7 @@ github_repo: "https://github.com/MatrixGHD/MatrixGHD.github.io.git" # you code r
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "不是已经尽力，而是不够努力"
-sidebar-avatar: /img/WechatIMG10.jpeg     # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/japan2.jpeg     # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
