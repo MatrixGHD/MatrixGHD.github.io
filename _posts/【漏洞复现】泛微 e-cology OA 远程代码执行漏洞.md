@@ -1,5 +1,15 @@
-#【漏洞复现】泛微 e-cology OA 远程代码执行漏洞
-[toc]
+---
+layout:     post
+title:      【漏洞复现】泛微 e-cology OA 远程代码执行漏洞
+subtitle:   远程代码执行漏洞
+date:       2020-10-16
+author:     matrix
+header-img: img/websecurity.jpeg
+catalog: true
+tags:
+    - 漏洞复现 
+---
+
 ## 0x00 漏洞说明
 2019年9月17日泛微OA官方更新了一个远程代码执行漏洞补丁，泛微e-cology OA系统的J**A Beanshell接口可被未授权访问，攻击者调用该Beanshell接口，可构造特定的HTTP请求绕过泛微本身一些安全限制从而达成远程命令执行，漏洞等级严重。
 ## 0x01 影响版本
