@@ -43,13 +43,13 @@ tags:
 
 所以不要把 容器和虚拟机弄混， 容器只是一个进程而已，只不过利用镜像提供的 rootfs 提供了调用所需的 userland 库支持，使得进程可以在受控环境下运行而已，它并没有虚拟出一个机器出来。
 
-![]({{site.baseurl}}/img/virtualmachines.png)
+![-c](/img/16027798885777.jpg)
+![-c](/img/16027799022829.jpg)
 
-![]({{site.baseurl}}/img/docker.png)
 
 容器与虚拟机是可以共存的。
+![-c](/img/16027799133156.jpg)
 
-![]({{site.baseurl}}/img/compare.png)
 
 ## Docker是什么？为什么要用Docker？
 
@@ -74,8 +74,8 @@ docker是容器，它将所有的访问文件和操作系统的api重新定向�
 ##### **Docker是如何跨平台的 ？**
 
 在mac下运行docker实际上是先开启了一个linux虚拟机，然后在虚拟机上运行docker。
+![-c743](/img/16027799335850.jpg)
 
-![]({{site.baseurl}}/img/docker2.jpeg)
 
 #### 为什么要用Docker
 
@@ -199,8 +199,7 @@ sudo apachectl stop //关闭apache
 #### 拉取镜像
 
 首先可以使用`docker search nginx` 查询有哪些关于nginx 的镜像。我们可以看到第一个即为官方镜像。
-
-![]({{site.baseurl}}/img/dockersearch.png)
+![-c1457](/img/16027799549643.jpg)
 
 `docker run --name nginx -d -p 80:80 nginx` 从官方镜像注册表拉取最新版nginx
 
@@ -219,7 +218,9 @@ sudo apachectl stop //关闭apache
 
 `docker exec -it mynginx /bin/bash` 在运行的容器中执行命令/bin/bash,打开一个交互模式终端
 
-![]({{site.baseurl}}/img/dockerexec.png)Nginx安装在usr/lib/nginx下，配置在etc/nginx下面，包括nginx.conf主配置文件，conf.d和site-enabled是附加的配置文件。后面，我们将会该目录映射到宿主机目录，以便于修改和管理。
+![-c1111](/img/16027800146125.jpg)
+
+Nginx安装在usr/lib/nginx下，配置在etc/nginx下面，包括nginx.conf主配置文件，conf.d和site-enabled是附加的配置文件。后面，我们将会该目录映射到宿主机目录，以便于修改和管理。
 
 #### 网站开发
 
@@ -232,16 +233,16 @@ sudo apachectl stop //关闭apache
 在/Users/matrix/nginx/app下创建一个index.html文件
 
 访问http://localhost:80
+![-c82](/img/16027800324682.jpg)
 
-![]({{site.baseurl}}/img/itworks.png)
 
 ` docker logs mynginx ` 可以查看刚刚的web日志
 
-![]({{site.baseurl}}/img/dockerlogs.png)
+![-c1488](/img/16027800423136.jpg)
 
 ` docker container list -a ` 可以查看容器的md5值
+![-c707](/img/16027800619721.jpg)
 
-![]({{site.baseurl}}/img/containerlist.png)
 
 进入容器也可使用md5值：` docker exec -it 527 bash` 
 
