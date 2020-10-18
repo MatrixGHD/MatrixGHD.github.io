@@ -1,7 +1,7 @@
 # Site settings
 title: Get Hand Dirty
 SEOTitle: Matrix's Blog
-header-img: img/about.jpg
+header-img: img/japan2.jpeg
 description: "Make Better Choice."
 keyword: "Matrix, Matrix's Blog, hack, security, web"
 url: "http://MatrixGHD.github.io"          # your host, for absolute URL
@@ -11,7 +11,7 @@ github_repo: "https://github.com/MatrixGHD/MatrixGHD.github.io.git" # you code r
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "不是已经尽力，而是不够努力"
-sidebar-avatar: /img/japan2.jpeg     # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/adout.jpg     # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
