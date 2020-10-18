@@ -1,5 +1,5 @@
 # Site settings
-title: Matrix Blog
+title: Get Hand Dirty
 SEOTitle: Matrix's Blog
 header-img: img/about.jpg
 description: "Make Better Choice."
@@ -103,5 +103,8 @@ friends: [
     },{
         title: "freebuf",
         href: "https://www.freebuf.com"
+    },{
+        title: "apple",
+        href: "https://www.apple.com"
     }
 ]
