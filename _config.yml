@@ -1,11 +1,11 @@
-# Site settings
+#Site settings
 title: Matrix's Blog 
 SEOTitle: Matrix's Blog
 header-img: img/about.jpg
 description: "Make Better Choice."
 keyword: "Matrix, Matrix's Blog, hack, security, web"
-url: "http://MatrixGHD.github.io"          # your host, for absolute URL
-baseurl: "https://matrixghd.github.io"      # for example, '/blog' if your blog hosted on 'host/blog'
+url: "http://www.matrixghd.com"          # your host, for absolute URL
+baseurl: "https://www.matrixghd.com"      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/MatrixGHD/MatrixGHD.github.io.git" # you code repository
 
 # Sidebar settings
