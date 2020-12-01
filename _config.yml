@@ -106,5 +106,13 @@ friends: [
     },{
         title: "apple",
         href: "https://www.apple.com"
-    }
+    },{
+        title: "jas502n",
+        href: "https://github.com/jas502n"
+    },{ 
+        title: "micro8",
+        href: "https://github.com/Micropoor/Micro8"
+    },{
+        title: "cmd5",
+        href: "https://www.cmd5.org"}
 ]
